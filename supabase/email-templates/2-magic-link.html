@@ -1,0 +1,26 @@
+<!--
+  Supabase → Authentication → Emails → "Magic Link"
+  Subject / Subjek:  Kode masuk Hanskuy Productions / Your sign-in code
+-->
+<div style="background:#0a0a0b;padding:32px 16px;font-family:Georgia,'Times New Roman',serif;">
+  <div style="max-width:480px;margin:0 auto;background:#17171a;border:1px solid #2a2a2e;border-radius:16px;padding:32px;color:#e4e4e7;">
+    <p style="margin:0 0 24px;font-size:22px;color:#ffffff;">Hanskuy <em style="color:#d4af37;">Productions</em></p>
+
+    <p style="margin:0 0 4px;font-size:16px;">Kode untuk masuk ke akun Anda:</p>
+    <p style="margin:0 0 20px;font-size:14px;color:#a1a1aa;">Your sign-in code:</p>
+
+    <p style="margin:0 0 24px;font-family:'Courier New',monospace;font-size:36px;letter-spacing:10px;font-weight:bold;color:#d4af37;">{{ .Token }}</p>
+
+    <p style="margin:0 0 4px;font-size:14px;line-height:1.6;">Masukkan kode ini di halaman masuk. Berlaku 1 jam.</p>
+    <p style="margin:0 0 24px;font-size:14px;line-height:1.6;color:#a1a1aa;">Enter this code on the sign-in page. It expires in 1 hour.</p>
+
+    <p style="margin:0 0 24px;font-size:14px;">
+      <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email&next=/dashboard" style="color:#d4af37;">Atau klik di sini untuk masuk / Or click here to sign in</a>
+    </p>
+
+    <p style="margin:0;font-size:12px;line-height:1.6;color:#71717a;">
+      Bukan Anda yang meminta? Abaikan email ini — akun Anda tetap aman.<br />
+      Didn't request this? Ignore this email — your account is still safe.
+    </p>
+  </div>
+</div>
